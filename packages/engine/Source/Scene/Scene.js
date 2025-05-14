@@ -4115,6 +4115,8 @@ const scratchBackgroundColor = new Color();
  * @private
  */
 function render(scene) {
+  console.log("start render()", scene);
+
   const frameState = scene._frameState;
 
   const context = scene.context;
@@ -4191,6 +4193,7 @@ function render(scene) {
   }
 
   context.endFrame();
+  console.log("end render()", scene);
 }
 
 function tryAndCatchError(scene, functionToExecute) {

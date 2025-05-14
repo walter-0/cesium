@@ -27,8 +27,16 @@
   </head>
   <body>
     <div id="cesiumContainer"></div>
-    <script>
-      const viewer = new Cesium.WebGPUViewer("#cesiumContainer");
+    <canvas id="canvas"></canvas>
+    <script type="module">
+      import { createBasicExample } from "../Source/WebGPU/basicExample.js";
+      // const viewer = new Cesium.WebGPUViewer("#cesiumContainer");
+      // const viewer = new Cesium.Viewer("cesiumContainer");
+
+      async function init() {
+        const canvas = document.getElementById("canvas");
+        await createBasicExample(canvas);
+      }
     </script>
   </body>
 </html>

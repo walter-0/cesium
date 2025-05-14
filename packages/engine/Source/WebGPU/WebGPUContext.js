@@ -62,7 +62,7 @@ class WebGPUContext {
 
       this._adapter = adapter;
       this.device = device;
-      this._context = context;
+      this.context = context;
       this._format = format;
       this._initialized = true;
       this._module = this.createShaderModule();
